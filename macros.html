@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Макросы для гугл таблиц</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="dCon">
+<h1>Макросы для гугл таблиц</h1>
+<br>
+<p style="float:left;margin-right:10px">/** @OnlyCurrentDoc */ <br>
+function del() {  <br>
+  var ss = SpreadsheetApp.getActiveSpreadsheet(); <br>
+  var sheet = ss.getSheetByName("Лист1"); <br>
+  var lr = sheet.getLastRow(); <br>
+
+  if(sheet.getRange(23,1).isChecked()===true){ <br>
+  var spreadsheet = SpreadsheetApp.getActive(); <br>
+  spreadsheet.getRangeList(['L7', 'A3:A19', 'C3:D19','g3:h19','j3:j19','k3:k18']).activate() <br>
+  .clear({contentsOnly: true, skipFilteredRows: true}); <br>
+  sheet.getRange(3,1).activate() <br> 
+  sheet.getRange(23, 1).uncheck(); <br>
+  } <br>
+}; </p>
+<span><p>Функция удаления</p>
+<p>Назначаем переменным функции</p>
+<br>
+<br>
+<p>Если в ячейки стоит чекбокс то выполняем условие</p>
+<br>
+<p>Выделяем диапазон ячеик</p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br></span>
+  </div>
+</body>
+</html>
